@@ -1,2 +1,2 @@
 # grid_eldendezes
-teszt
+https://gircsi117.github.io/grid_eldendezes/
