@@ -1,0 +1,85 @@
+body{
+    
+}
+
+/*Első*/
+.container-1{
+    padding: 5px;
+    width: 70%;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    margin: auto;
+}
+
+.container-1 .item{
+    padding: 10px;
+    font-size: 25px;
+    margin: 5px;
+    text-align: center;
+    background-color: orangered;
+    justify-content: space-between;
+    align-content: space-around;
+    height: 150px;
+}
+
+/*Második*/
+.container-2{
+    padding: 5px;
+    width: 70%;
+    background-color: orange;
+    display: grid;
+    /*
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    */
+    grid-template-areas: 
+        "header header header header header header"
+        "menu main main main right right"
+        "menu footer footer footer footer footer"
+    ;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.container-2 .item{
+    padding: 10px;
+    font-size: 25px;
+    margin: 5px;
+    text-align: center;
+    background-color: orangered;
+    justify-content: space-between;
+    align-content: space-around;
+    min-height: 150px;
+}
+
+.container-2 header{
+    grid-area: header;
+}
+
+.container-2 .menu{
+    grid-area: menu;
+}
+
+.container-2 .main{
+    grid-area: main;
+}
+
+.container-2 .right{
+    grid-area: right;
+}
+
+.container-2 footer{
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 500px){
+    .container-2{
+        grid-template-areas: 
+            "header header header header header header"
+            "menu main main main main main"
+            "menu right right right right right"
+            "footer footer footer footer footer footer"
+        ;
+    }
+}
